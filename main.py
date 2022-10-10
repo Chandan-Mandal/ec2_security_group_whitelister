@@ -77,12 +77,10 @@ def create_new_rule(new_ip):
 if __name__ == '__main__':
     old_ip_address = get_old_ip()
     new_ip_address = get_new_ip()
-    print(old_ip_address == new_ip_address)
 
     if old_ip_address and old_ip_address != new_ip_address:
         remove_old_rule(old_ip_address)
         create_new_rule(new_ip_address)
-        print("OK")
     elif old_ip_address:
         # old IP is the same as the new one
         print("IP already up-to-date")
