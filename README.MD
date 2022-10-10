@@ -4,8 +4,9 @@
 
 > Note: pipenv is required to be able to follow the instructions.
 
-## Installation in Mac
+## Installation of pipenv in mac
 - brew install pipenv
+## Steps to install
  
 1. Clone this repo
 2. Run `pipenv install`
