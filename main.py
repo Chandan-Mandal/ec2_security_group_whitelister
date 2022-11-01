@@ -30,8 +30,10 @@ def get_old_ip():
             ip_pems = security_groups[el]["IpPermissions"]
 
             for i in range(len(ip_pems)):
-                if ip_pems[i]["IpRanges"][0].get("Description") == RULE_DESCRIPTION:
-                    return ip_pems[i]["IpRanges"][0]["CidrIp"]
+                each_el = ip_pems[i]["IpRanges"]
+                for j in range(len(each_el)):
+                   if each_el[j].get("Description") == RULE_DESCRIPTION:
+                     return each_el[j]["CidrIp"]
 
     return None
 
