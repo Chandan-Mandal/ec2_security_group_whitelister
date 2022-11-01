@@ -11,8 +11,7 @@ RULE_DESCRIPTION = os.environ['RULE_DESCRIPTION']
 ec2 = boto3.client(
     "ec2",
     aws_access_key_id=os.environ['AWS_ACCESS_KEY_ID'],
-    aws_secret_access_key=os.environ['AWS_SECRET_ACCESS_KEY'],
-    region_name=os.environ['AWS_REGION'],
+    aws_secret_access_key=os.environ['AWS_SECRET_ACCESS_KEY']
 )
 
 def get_new_ip():
